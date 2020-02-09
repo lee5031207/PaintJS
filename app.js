@@ -7,6 +7,8 @@ const colors = document.getElementsByClassName("jsColor");
 const range = document.getElementById("jsRange");
 const mode = document.getElementById("jsMode");
 const saveBtn = document.getElementById("jsSave");
+const eraser = document.getElementById("jsEraser");
+
 
 
 const color_arr = Array.from(colors);
@@ -23,7 +25,7 @@ ctx.lineWidth = 2.5;
 
 let painting = false;
 let filling = false;
-
+ 
 function handleColorClick(event){
     ctx.strokeStyle = event.target.style.backgroundColor;
     ctx.fillStyle = event.target.style.backgroundColor;
@@ -102,4 +104,16 @@ function changeHTML(event){
  if(saveBtn){
      saveBtn.addEventListener("click",handleSaveClick);
  }
+
+
+
+ function handleEraserClick(event){
+    ctx.strokeStyle = "white";
+    ctx.lineWidth = 10.0;
+    console.log(ctx.strokeStyle,ctx.lineWidth);
+ }
  
+ if(eraser){
+     eraser.addEventListener("click",handleEraserClick);
+ }
+

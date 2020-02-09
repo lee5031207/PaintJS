@@ -58,3 +58,10 @@ body {
 .controls .controls_range{
     margin-bottom: 30px;
 }
+
+.controls .controls_eraser img:active{
+    transform: scale(0.90);   /* 클릭시 눌러지는효과*/
+}
+.controls .controls_eraser img{
+    cursor:pointer;
+}
